@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 correct-position">
+      <div class="title" [@showAnimate]>{{'Registration.Registration'  | translate }}</div>
+      <div class="panel" [@showAnimate]>
+        <div class="bank-account-block">
+          <div class="bank-account-block__title">
+            <app-email-block #email></app-email-block>
+          </div>
+        </div>
+        <div class="form-registration2">
+          <form [formGroup]="form" class="form-block-content" id="registrationForm-2">
+            <div class="user-personal-data">
+              <div class="form-block">
+                <div class="list-input">
+                  <app-input [label]="'Registration.RegistrationsForm.FirstName' | translate"
+                             typeInput="text"
+                             class="input order-2 order-md-0"
+                             nameInput="first_name"
+                             maxLengthInput="100"
+                             [errorMessage]='errorMessages.first_name | translate'
+                             [formControlInput]="form.controls.first_name">
+                  </app-input>
+                  <app-input [label]="'Registration.RegistrationsForm.LastName' | translate"
+                             nameInput="last_name"
+                             typeInput="text"
+                             maxLengthInput="100"
+                             class="input order-1 order-md-0"
+                             [errorMessage]='errorMessages.last_name | translate'
+                             [formControlInput]="form.controls.last_name">
+                  </app-input>
+                  <app-input [label]="'Registration.RegistrationsForm.MiddleName' | translate"
+                             typeInput="text"
+                             maxLengthInput="100"
+                             class="input order-3 order-md-0 hidden-input"
+                             nameInput="middle_name"
+                             [errorMessage]='errorMessages.middle_name | translate'
+                             [formControlInput]="form.controls.middle_name">
+                  </app-input>
+                  <app-input [label]="'Registration.RegistrationsForm.TaxNumber' | translate"
+                             typeInput="tel"
+                             class="input order-4  order-md-0"
+                             nameInput="tax_number"
+                             (input)="nextInput()"
+                             [maskInput]="maskTaxNumber"
+                             [errorMessage]='errorMessages.tax_number | translate'
+                             [formControlInput]="form.controls.tax_number">
+                  </app-input>
+                </div>
+              </div>
+            </div>
+            <div class="passport-data-user">
+              <app-user-passport-data #passportData></app-user-passport-data>
+            </div>
+            <div class="btn-block">
+              <div class="info-content">
+                <span
+                  class="info-content__item-text">{{'link.NextRedirectLink'  | translate }}</span>
+                <span class="info-content__item-text">
+                                         <a class="link" href="#"
+                                            target="_blank">{{'link.PersonalData'  | translate }}
+                                         </a>
+                                </span>
+                <span class="info-content__item-text">{{'link.And'  | translate }}</span>
+                <span class="info-content__item-text link">
+                                    <a class="link" href="#"
+                                       target="_blank">{{'link.ServiceInformation'  | translate }}</a>
+                                </span>
+              </div>
+              <div class="btn-next">
+                <button
+                  type="submit"
+                  (click)="submitRegistrationForm()"
+                  [ngClass]="{'btn-primary-disabled': this.checkIfTheButtonIsPressed() && !(this.form.valid && this.passportComponent.statusForm()),'cursor-wait': disabledBtn}"
+                  [disabled]="this.checkIfTheButtonIsPressed() && !(this.form.valid && this.passportComponent.statusForm()) || disabledBtn"
+                  class="btn-primary">
+                  <span [ngClass]="{'loader-text': disabledBtn}">{{'General.Next'  | translate }}</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

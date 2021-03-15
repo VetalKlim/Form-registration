@@ -1,0 +1,90 @@
+<div class="info-user">
+  <h3 class="info-user__title">
+    <span *ngIf="!idCard" [@showAnimate]>{{"Registration.PassportData.Passport" | translate}}</span>
+    <span *ngIf="idCard" [@showAnimate]>{{"Registration.PassportData.PassportID" | translate}}</span>
+  </h3>
+  <p class="info-user__toggle" (click)="toggleIdentityType()">
+    <span *ngIf="!idCard" [@showAnimate]>{{"Registration.PassportData.DataIDPassport" | translate}}</span>
+    <span *ngIf="idCard" [@showAnimate]>{{"Registration.PassportData.DataPassport" | translate}}</span>
+  </p>
+</div>
+<form [formGroup]="form" class="form-block">
+  <div class="input-section1" *ngIf="!idCard" [@showAnimate]>
+    <app-input [label]="'Registration.PassportData.PassportSeries' | translate"
+               #passportSeries
+               typeInput="text"
+               [minLengthInput]="1"
+               class="passport-series"
+               nameInput="passport_series"
+               id="passport-1"
+               (input)="nextInput('passport_number')"
+               [maskInput]="maskSeriesPassport"
+               [disabledInput]="currentCredit"
+               [errorMessage]='errorMessages.passport_series |translate '
+               [formControlInput]="form.controls.passport_series">
+    </app-input>
+    <app-input [label]="'Registration.PassportData.PassportNumber' | translate"
+               #passportNumber
+               typeInput="tel"
+               nameInput="passport_number"
+               id="passport-2"
+               [disabledInput]="currentCredit"
+               [maskInput]="maskNumberPassport"
+               [errorMessage]='errorMessages.passport_number | translate'
+               [formControlInput]="form.controls.passport_number">
+    </app-input>
+  </div>
+  <div class="input-section2" *ngIf="!idCard" [@showAnimate]>
+    <app-input [label]="'Registration.PassportData.IdentityIssuer' | translate"
+               typeInput="text"
+               maxLengthInput="100"
+               nameInput="identity_issuer"
+               id="passport-3"
+               [disabledInput]="currentCredit"
+               [errorMessage]='errorMessages.identity_issuer | translate'
+               [formControlInput]="form.controls.identity_issuer">
+    </app-input>
+    <app-calendar [labelCalendar]="'Registration.PassportData.IdentityIssuedDate' | translate"
+                  [disableCalendar]="currentCredit"
+                  [startDate]="passportStartDate"
+                  nameInput="identity_issued_date"
+                  [endDate]="passportEndDate"
+                  [errorMessage]='errorMessages.identity_issued_date | translate'
+                  [formControlCalendar]="form.controls.identity_issued_date">
+    </app-calendar>
+  </div>
+  <div *ngIf="idCard" class="input-section1">
+    <app-input *ngIf="idCard" [@showAnimate]
+               [label]="'Registration.PassportData.IdentityNumber' | translate"
+               #identityNumber
+               typeInput="tel"
+               class="input-id-card"
+               nameInput="identity_number"
+               (input)="nextInput('passport_number')"
+               [disabledInput]="currentCredit"
+               [maskInput]="maskNumberPassportIDCard"
+               [errorMessage]='errorMessages.identity_number | translate'
+               [formControlInput]="form.controls.identity_number">
+    </app-input>
+  </div>
+  <div *ngIf="idCard" class="input-section2" [@showAnimate]>
+    <app-input [label]="'Registration.PassportData.IdentityIssuerIdCard' | translate"
+               #identityIssuer
+               typeInput="tel"
+               nameInput="identity_issuer"
+               [disabledInput]="currentCredit"
+               [maskInput]="maskIdentityIssuerIDCard"
+               [errorMessage]='errorMessages.identity_issuer_id_card | translate'
+               [formControlInput]="form.controls.identity_issuer_id_card">
+    </app-input>
+    <app-calendar [labelCalendar]="'Registration.PassportData.IdentityIssuedIdDate' | translate"
+                  #cal
+                  [startDate]="passportStartDate"
+                  nameInput="identity_issued_date"
+                  [endDate]="passportEndDate"
+                  [disableCalendar]="currentCredit"
+                  [errorMessage]='errorMessages.identity_issued_id_date | translate'
+                  [formControlCalendar]="form.controls.identity_issued_id_date">
+    </app-calendar>
+  </div>
+</form>

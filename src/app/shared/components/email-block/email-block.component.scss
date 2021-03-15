@@ -1,0 +1,66 @@
+@import "../../../../styles/variables";
+
+.message-block {
+  background: var(--grey6);
+  min-height: 103px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  @media (max-width: $md) {
+    flex-direction: column;
+  }
+
+  .message-block-description {
+    width: 40%;
+    display: flex;
+    margin: auto;
+    @media (max-width: $lg) {
+      width: 42%;
+    }
+    @media (max-width: $md) {
+      margin: 20px auto 0 auto;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+    &__icon {
+      min-width: 70px;
+      background-image: url("../../../../assets/img/mail.png");
+      background-repeat: no-repeat;
+      background-position: 2px 3px;
+      height: 44px;
+      margin: auto;
+      @media (max-width: $md) {
+        background-position: 9px 3px;
+      }
+    }
+
+    &__text {
+      margin: 0 10px;
+      text-align: left;
+      font-family: var(--mainFont);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      @media (max-width: $md) {
+        margin: 10px 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  .message-block-input {
+    width: 46%;
+    margin: auto;
+    @media (max-width: $md) {
+      width: 96%;
+      margin: 10px auto;
+    }
+  }
+}
+

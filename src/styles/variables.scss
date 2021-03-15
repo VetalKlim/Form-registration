@@ -1,0 +1,56 @@
+$xs: 0;
+$sm: 576px;
+$md: 767px;
+$lg: 992px;
+$xl: 1200px;
+
+:root {
+  // font
+  --mainFont: CoreSansG;
+  // color
+  --header-color: linear-gradient(90deg, #0D5297 0.26%, #0D5297 47.1%, #0D5297 99.8%);
+  //$grey: #ccc;
+  --grey1: #CFE0F4;
+
+  // background
+  --black: #000;
+  --white: #fff;
+  --grey: #ccc;
+  --grey2: #808080;
+  --grey3: #D3D3D3;
+  --grey5: #979797;
+  --grey6: #F5F5F5;
+  --blue: #6987F0;
+  --blue2: #3851C6;
+  --blue4: #0D5297;
+  --red: #f06979;
+
+  // background
+  --black-rgba: rgba(0, 0, 0, 0.7);
+
+  // btn-passport
+  --passport-toggle: #6987F0;
+
+  // input
+  --input-focus: #0D5297;
+
+
+  // button color primary
+  --btn1-normal: linear-gradient(167.72deg, #0D5297 -33.07%, #0D5297 48.35%, #0D5297 139.94%);
+  --btn1-hover: linear-gradient(351.95deg, #0D5297 -48.61%, #0D5297 33.69%, #0D5297 126.27%);
+  --btn1-focus: linear-gradient(351.95deg, #0D5297 -48.61%, #0D5297 33.69%, #0D5297 126.27%);
+  --btn1-disabled: linear-gradient(167.72deg, #5A4BE6 -33.07%, #73AFF7 48.35%, #93D0D9 139.94%);
+  --btn1-color-text-focus: #6D98D9;
+  --btn1-color-text: #fff;
+
+
+  // calendar color
+  --btn4-hover: linear-gradient(122.5deg, #5A4BE6 -33.07%, #73AFF7 48.35%, #93D0D9 139.94%);
+  --btn4-border: #CCCCCC;
+  --background-selected-day: linear-gradient(314.41deg, #5A4BE6 -48.61%, #73AFF7 33.69%, #93D0D9 126.27%);
+  --color-text-header: rgba(0, 0, 0, 0.543337);
+}
+
+
+
+

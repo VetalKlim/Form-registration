@@ -1,0 +1,86 @@
+@import "../styles/variables";
+@import "../styles/fonts";
+
+/// === style for calendar matDatepicker =======
+.cdk-overlay-pane {
+  .mat-datepicker-content {
+    position: relative !important;
+    top: 2px;
+    box-shadow: 0 0 36px 1px var(--btn4-border) !important;
+    border: 1px solid var(--btn4-border);
+    border-radius: 1px;
+
+    .mat-calendar-body-cell-content {
+      border-width: 0 !important;
+      color: var(--black);
+    }
+
+    .mat-calendar {
+      min-height: 360px !important;
+
+      .mat-button-wrapper {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .mat-calendar-next-button, .mat-button-base {
+        &:after {
+          color: var(--grey2);
+        }
+      }
+    }
+
+    .mat-calendar-body-selected { // Выбраный день
+      background: var(--background-selected-day);
+      color: var(--white)l !important;
+    }
+
+    .mat-calendar-table-header { // Месяц и год в шапке календаря
+      color: var(--color-text-header)l;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .mat-calendar-body-label { // Название месяца
+      color: var(--color-text-header)l;
+    }
+
+    .mat-calendar-body-active { // текущая дата
+      background-color: var(--white)l;
+      color: var(--white)l;
+    }
+
+    .mat-calendar-body-cell { // стилизация календарных дней
+      border-radius: 50%;
+      padding: 10px;
+      background: transparent;
+
+      .mat-calendar-body-cell-content { // цвет календарных дней
+        background-color: var(--white);
+        color: var(--black);
+      }
+
+      .mat-calendar-body-today { // текущая дата в календаре
+        background-color: var(--white);
+        color: var(--blue2);
+      }
+
+      &:hover { // наведение на день календаря
+        .mat-calendar-body-cell-content {
+          color: var(--black);
+          background: var(--btn4-hover);
+        }
+      }
+    }
+  }
+
+  .mat-calendar-body-disabled { // стиль когда заблоирован выбор даты.
+    .mat-calendar-body-cell-content {
+      opacity: 0.5 !important;
+    }
+  }
+}

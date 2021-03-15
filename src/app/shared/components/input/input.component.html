@@ -1,0 +1,32 @@
+<div class="input-customize">
+  <div class="input-position">
+    <div class="error-block"
+         *ngIf="visibleError"
+         [@transformPanel]
+         [ngClass]="{'visible-error': visibleError}">
+      <p class="error-block__text">{{errorMessage}}</p>
+    </div>
+    <input #inputElement class="form-input"
+           [class.ng-empty]='!formControlInput.value'
+           [name]="nameInput"
+           [placeholder]="placeholderInput"
+           [attr.maxLength]="maxLengthInput"
+           [attr.minLength]="minLengthInput"
+           [textMask]="maskOptions"
+           [formControl]="formControlInput"
+           (blur)="lossOfFocus($event)"
+           (mouseout)="lossOfFocus($event)"
+           [type]="typeInput"
+           (mouseleave)="visibleError = false;"
+           [ngClass]="{'error-input': errorChecking(), 'disabled-input': disabledInput}"
+    >
+    <span class="error-icon"
+          [ngClass]="{'correct-icon':  this.formControlInput.invalid && !!this.errorMessage}"
+          *ngIf="errorChecking()"
+          (mouseover)="visualError()"
+          (click)="visualErrorMob()"
+          (mouseleave)="visibleError= false">
+    </span>
+    <label class="form-label" [ngClass]="{'err-label': errorChecking()}">{{label}}</label>
+  </div>
+</div>

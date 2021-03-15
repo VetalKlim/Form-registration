@@ -1,0 +1,62 @@
+// ====== btn-primary =======
+.btn-primary {
+  width: 100%;
+  border: none;
+  color: var(--btn1-color-text) !important;
+  padding-top: 20px;
+  border-radius: 4px;
+  padding-bottom: 19px;
+  background-size: 1px 80px;
+  transition: all 0.4s ease;
+  position: relative;
+  font: 400 16px/19px var(--mainFont);
+  z-index: 1;
+  background: var(--btn1-normal) !important;
+  cursor: pointer;
+  min-height: 56px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    background-image: var(--btn1-hover);
+    z-index: -1;
+    transition: opacity 0.4s linear;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    outline: none;
+  }
+
+  &:active {
+    transition: all 0s ease-in;
+    color: var(--btn1-color-text-focus);
+    background: var(--btn1-focus);
+  }
+}
+
+.btn-primary-disabled {
+  opacity: 0.6;
+  width: 100%;
+  cursor: not-allowed;
+  outline: none;
+  border: none;
+  color: $white;
+  padding-top: 20px;
+  border-radius: 4px;
+  padding-bottom: 19px;
+  background-size: 1px 80px;;
+  font: 400 16px/19px var(--mainFont);
+  background: var(--btn1-disabled);
+}

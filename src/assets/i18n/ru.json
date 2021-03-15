@@ -1,0 +1,52 @@
+{
+  "General": {
+    "Next": "Далее"
+  },
+  "link": {
+    "NextRedirectLink": "Нажимая «Далее», я подтверждаю, что ознакомлен(а) и принимаю ",
+    "PersonalData": "Соглашение об обработке персональных данных",
+    "And": " и ",
+    "ServiceInformation": "Информацию об услуге и условия предоставления услуг Компании"
+  },
+  "Registration": {
+    "Registration": "Регистрация",
+    "RegistrationsForm": {
+      "FirstName": "Имя",
+      "LastName": "Фамилия",
+      "MiddleName": "Отчеств",
+      "TaxNumber": "ИНН"
+    },
+    "PassportData": {
+      "Passport": "Паспортные данные",
+      "PassportID": "У меня ID карта",
+      "DataIDPassport": "Данные ID карты",
+      "DataPassport": "У меня есть паспорт",
+      "PassportSeries": "Серия",
+      "PassportNumber": "Номер",
+      "IdentityIssuer": "Кем выдан",
+      "IdentityIssuedDate": "Когда выдан",
+      "IdentityNumber": "Номер ID карты",
+      "IdentityIssuerIdCard": "Кем выдана",
+      "IdentityIssuedIdDate": "Когда выдана"
+    },
+    "ErrorMassage": {
+      "Required": "Поле не должно быть пустым",
+      "CyrillicValidator": "Разрешено вводить только кириллицу",
+      "TaxNumberValidator": " Проверте правильность ввода ИНН",
+      "PassportError" : "Пожалуйста, введите серию паспорта",
+      "NumberPassportError": "Пожалуйста, введите номер паспорта",
+      "PassportIDError": "Пожалуйста, введите номер ID карты",
+      "IdentityIssuerError": "Пожалуйста, введите кем выдан паспорт",
+      "IdentityIssuerIdCardError": "Пожалуйста, введите кем выдна ID карта",
+      "IdentityIssuedDateError": "Пожалуйста, введите корректную дату выдачи паспорта",
+      "IdentityIssuedIdDateError": "Пожалуйста, введите корректную дату выдачи ID карты"
+    }
+  },
+  "Email": {
+    "EmailBonuses": "Укажите e-mail и получите 100 баллов на бонусный счет"
+  },
+  "SnackBarMessage": {
+    "ErrorSend": "В полях ФИО должно быть минимум два символа",
+    "SuccessfullySend": "Все поля успешно заполнены. Даннее успешно отправлены"
+  }
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'CoreSansG';
+  src: url('../assets/fonts/CoreSansG-Regular.woff2') format('woff2'),
+  url('../assets/fonts/CoreSansG-Regular.woff') format('woff'),
+  url('../assets/fonts/CoreSansG-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoreSansG';
+  src: url('../assets/fonts/CoreSansG-Light.woff2') format('woff2'),
+  url('../assets/fonts/CoreSansG-Light.woff') format('woff'),
+  url('../assets/fonts/CoreSansG-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoreSansG';
+  src: url('../assets/fonts/CoreSansG-Medium.woff2') format('woff2'),
+  url('../assets/fonts/CoreSansG-Medium.woff') format('woff'),
+  url('../assets/fonts/CoreSansG-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoreSansG';
+  src: url('../assets/fonts/CoreSansG-Bold.woff2') format('woff2'),
+  url('../assets/fonts/CoreSansG-Bold.woff') format('woff'),
+  url('../assets/fonts/CoreSansG-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

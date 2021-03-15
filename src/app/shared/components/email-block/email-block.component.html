@@ -1,0 +1,19 @@
+<form [formGroup]="form" novalidate>
+  <section class="message-block">
+    <div class="message-block-description">
+      <span class="message-block-description__icon"></span>
+      <span
+        class="message-block-description__text">{{'Email.EmailBonuses'  | translate }}</span>
+    </div>
+    <div class="message-block-input">
+      <app-input label="E-mail"
+                 nameInput="email"
+                 typeInput="text"
+                 maxLengthInput="100"
+                 [errorMessage]='errorMessages.email'
+                 [formControlInput]='form.controls.email'>
+      </app-input>
+    </div>
+  </section>
+</form>
+

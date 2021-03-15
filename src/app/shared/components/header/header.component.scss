@@ -1,0 +1,75 @@
+@import "../../../../styles/variables";
+
+.header {
+  height: 100px;
+  background: var(--header-color);
+  @media (max-width: $sm) {
+    height: 60px;
+  }
+
+  .container {
+    display: flex;
+    margin: auto;
+    padding: 0 30px;
+    height: 100px;
+    @media (max-width: $sm) {
+      padding: 0 15px;
+      height: 60px;
+    }
+
+    .label {
+      color: var(--grey1);
+      font-size: 33px;
+      justify-content: center;
+      width: 60%;
+      font-family: var(--mainFont);
+      margin: auto 0 auto 0;
+      text-align: left;
+      @media (max-width: $sm) {
+        font-size: 28px;
+      }
+
+      &__icon {
+        font-family: var(--mainFont);
+        border-bottom: 3px solid var(--grey1);
+        padding-bottom: 3px;
+      }
+    }
+
+    .lang {
+      display: flex;
+      justify-content: flex-end;
+      width: 40%;
+      font-size: 16px;
+      margin: auto;
+
+      .line {
+        display: block;
+        border-left: 2px solid var(--grey1);
+        height: 22px;
+        position: relative;
+        top: 2px;
+      }
+
+      &__item {
+        color: var(--grey1);
+        padding: 0 10px;
+        font-family: var(--mainFont);
+        transition: all 0.3s ease-in-out;
+        font-weight: 400;
+
+
+        &:hover {
+          transition: all 0.3s ease-in;
+          cursor: pointer;
+          color: var(--blue);
+        }
+      }
+
+      .active-lang {
+        color: red;
+      }
+    }
+  }
+
+}

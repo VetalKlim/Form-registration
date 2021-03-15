@@ -1,0 +1,20 @@
+
+// стилизация снэк-бара
+.cdk-overlay-container {
+  z-index: 2000 !important;
+
+  .style-snackbar, .mat-snack-bar-container, .error-snack-bar {
+    text-align: center;
+    background-color: var(--black-rgba);
+    color: var(--white);
+
+    .mat-simple-snackbar {
+      display: flex;
+      font: 300 16px/18px var(--mainFont);
+      justify-content: center;
+    }
+  }
+}
+.error-snack-bar {
+  background-color: var(--red) !important;
+}

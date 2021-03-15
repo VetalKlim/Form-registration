@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="container">
+    <div class="label">
+      <span class="label__icon"> Registration </span>
+    </div>
+    <div class="lang">
+      <a class="lang__item"
+         [ngClass]="{'active-lang': translate.currentLang === 'ru'}"
+         (click)="langToggle('ru')">RU</a>
+      <span class="line"></span>
+      <a class="lang__item"
+         [ngClass]="{'active-lang': translate.currentLang === 'uk'}"
+         (click)="langToggle('uk')">UK</a>
+    </div>
+  </div>
+</header>

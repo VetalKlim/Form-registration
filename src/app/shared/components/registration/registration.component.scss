@@ -1,0 +1,193 @@
+@import "../../../../styles/variables";
+
+.container {
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+    .correct-position {
+      padding-right: 5px !important;
+      padding-left: 5px !important;
+
+      .panel {
+        padding: 0;
+        margin: 10px 0;
+
+        .bank-account-block {
+          max-height: 260px;
+          min-height: 100px;
+          background: var(--grey6);
+
+          &__title {
+            padding: 20px 10px;
+            text-align: center;
+            font-family: var(--mainFont);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+          }
+
+          .bank-link-block {
+            overflow: hidden;
+            overflow-x: auto;
+            position: relative;
+
+            .position {
+              height: 109px;
+              display: flex;
+              justify-content: space-evenly;
+
+              .bank-link {
+                height: 55px;
+                max-width: 130px;
+                min-width: 130px;
+                cursor: pointer;
+
+                .icon-bank {
+                  display: block;
+                  background-repeat: no-repeat;
+                  background-position: 50% 50%;
+                  width: 100%;
+                  height: 100%;
+                  margin: auto;
+                }
+
+                .name-bank {
+                  display: block;
+                  font-family: var(--mainFont);
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                  margin: 10px 10px;
+                  text-align: center;
+                  color: var(--grey5);
+                }
+              }
+
+              @media (max-width: $md) {
+                width: 600px;
+              }
+            }
+          }
+        }
+
+        .form-registration2 {
+          .form-block-content {
+            .user-personal-data {
+              .form-block {
+                margin: 20px 0;
+
+                .list-input {
+                  display: flex;
+                  flex-wrap: wrap;
+                  width: 94%;
+                  margin: auto;
+                  @media (max-width: $md) {
+                    flex-direction: column;
+                  }
+
+                  .input {
+                    width: 48%;
+                    margin: 10px auto;
+                    @media (max-width: $md) {
+                      width: 98%;
+                    }
+                  }
+
+                }
+              }
+            }
+
+            .passport-data-user {
+              width: 92%;
+              margin: 0 auto 30px auto;
+              @media (max-width: $md) {
+                margin: auto;
+              }
+            }
+
+            .btn-block {
+              margin: 20px 38px;
+              display: flex;
+              justify-content: space-between;
+              @media (max-width: $lg) {
+                margin: 20px 27px;
+              }
+              @media (max-width: $md) {
+                flex-direction: column;
+                margin: 10px 15px;
+              }
+
+              .info-content {
+                width: 49%;
+                font-size: 14px;
+                color: var(--passport-toggle);
+                line-height: 16px;
+                margin: auto;
+
+                &__item-text {
+                  font-family: var(--mainFont);
+                  font-size: 13px;
+                  color: var(--grey2);
+
+                  .link {
+                    cursor: pointer;
+                    font-weight: 500;
+                    background: var(--blue4);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    line-height: 14px;
+                    border-bottom: 1px solid transparent;
+                    transition: all 0.4s ease-out;
+
+                    &:hover {
+                      transition: all 0.4s ease-in;
+                      border-bottom: 1px solid var(--blue4);
+                      @media (max-width: $md) {
+                        border-bottom: 1px solid transparent;
+                      }
+                    }
+                  }
+                }
+
+                @media (max-width: $md) {
+                  width: 97%;
+                  margin: 10px auto;
+                  line-height: 18px;
+                }
+              }
+
+              .btn-next {
+                width: 50%;
+
+                @media (max-width: $md) {
+                  width: 100%;
+                  margin: 10px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+.hidden-input {
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar { /* chrome based */
+  width: 0; /* ширина scrollbar'a */
+  background: transparent; /* опционально */
+}
+
+.bank-account-block {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}

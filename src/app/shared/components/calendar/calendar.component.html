@@ -1,0 +1,38 @@
+<div class="calendar-customize">
+  <div class="positions-calendar">
+    <div class="error-block"
+         *ngIf="visibleError"
+         [@transformPanel]
+         [ngClass]="{'visible-error': visibleError}">
+      <p class="error-block__text">{{errorMessage}}</p>
+    </div>
+    <input type="text"
+           #calendarInput
+           maxlength="10"
+           class="form-input"
+           [ngClass]="{'error-input': errorChecking(), 'disabled-input': disableCalendar}"
+           [pattern]="pattern"
+           [formControl]="formControlCalendar"
+           (mouseover)="errorVisible()"
+           [name]="nameInput"
+           (mouseleave)="visibleError = false"
+           [matDatepicker]="myDatePicker"
+           [min]="startDate"
+           (dateChange)="transferParent($event.value)"
+           (input)="transferDate($event)"
+           [max]="endDate"
+           (focus)="focusCalendar($event)">
+    <div class="position-btn-calendar"
+         mat-raised-button
+         (click)="myDatePicker.open()">
+      <div class="icon-calendar"
+           (click)="focusCalendar($event, true)"
+           [ngClass]="{'icon-calendar': iconActive, 'icon-calendar-active': !iconActive, 'disabled-input': disableCalendar}">
+      </div>
+    </div>
+    <mat-datepicker #myDatePicker></mat-datepicker>
+    <label class="form-label" [ngClass]="{'active-label': !labelActive , 'no-active-label': labelActive }">
+      <span [ngClass]="{'err-label': errorChecking()}">{{labelCalendar}}</span> </label>
+  </div>
+</div>
+
